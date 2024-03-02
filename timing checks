@@ -1,0 +1,33 @@
+  *(_DWORD *)(a2 + 196) = v20;
+      *(_DWORD *)(a2 + 304) = 10494550;
+      *(_DWORD *)(a2 + 304) ^= 0x35B1E8B6u;
+      *(_DWORD *)(a2 + 304) ^= 0x2AC29E95u;
+      *(_DWORD *)(a2 + 304) ^= 0x1FD35474u;
+      *(_DWORD *)(a2 + 1360) = *(_DWORD *)(a2 + 304);
+      *(_DWORD *)(a2 + 304) = 1683523785;
+      *(_DWORD *)(a2 + 304) ^= 0x71A856D8u;
+      *(_DWORD *)(a2 + 304) ^= 0x1276353Bu;
+      *(_DWORD *)(a2 + 304) ^= 0x786EB1Au;
+      *(_DWORD *)(a2 + 8) = *(_DWORD *)(a2 + 304);
+      if ( !(dword_1077487C & 1) )
+      {
+        dword_1077487C |= 1u;
+        _Mtx_init_in_situ(&unk_1077481C, 2);
+        sub_10053FAC(&unk_1077484C);
+        dword_10774874 = 0;
+        dword_10774878 = 0;
+        atexit(sub_F97A750);
+        *(_DWORD *)(a2 + 1416) = 11;
+      }
+      *(_DWORD *)(a2 + 216) = &unk_1077481C;
+      *(_BYTE *)(a2 + 220) = 0;
+      *(_DWORD *)(a2 + 304) = 941084901;
+      *(_DWORD *)(a2 + 304) ^= 0x3817D081u;
+      v44 = *(_DWORD *)(a2 + 304);
+      *(_DWORD *)(a2 + 1416) = 11;
+      *(_DWORD *)(a2 + 4) = v44;
+      v45 = sub_F9A2D10(a2 + 216);
+      *(_DWORD *)(a2 + 200) = *(_DWORD *)(a2 + 216);
+      v46 = _Query_perf_frequency();
+      v48 = v47;
+      LODWORD(v49) = _Query_perf_counter();
