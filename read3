@@ -1,0 +1,24 @@
+push    rbx
+sub     rsp, 20h
+rdtsc
+shl     rdx, 20h
+or      rax, rdx
+mov     [rsp], rax
+xor     eax, eax
+xor     ecx, ecx
+cpuid
+lea     r8, [rsp+10h]
+mov     [r8], eax
+mov     [r8+4], ebx
+mov     [r8+8], ecx
+mov     [r8+0Ch], edx
+rdtsc
+shl     rdx, 20h
+or      rax, rdx
+mov     [rsp+8], rax
+mov     rax, [rsp]
+mov     rcx, [rsp+8]
+sub     rcx, rax
+mov     rax, rcx
+add     rsp, 20h
+pop     rbx
