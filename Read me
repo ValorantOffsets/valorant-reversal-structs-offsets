@@ -1,0 +1,11 @@
+    // SET get_bone_matrix
+    cheat::engine::set_get_bone_matrix(base_address + 0x1395280); // 48 89 5C 24 ?? 48 89 74 24 ?? 57 48 81 EC ?? ?? ?? ?? F6 81
+ 
+    // SET UWORLD
+    cheat::engine::set_world(reinterpret_cast<Classes::UWorld**>(base_address + 0x37E4918)); // 48 8B 1D ? ? ? ? ? ? ? 10 4C 8D 4D ?? 4C
+ 
+    // READ GOBJECTS
+    Classes::UObject::GObjects = reinterpret_cast<Classes::FUObjectArray*>(base_address + 0x36EFDC0); // 48 8D 0D ? ? ? ? E8 ? ? ? ? E8 ? ? ? ? 48 8B D6
+ 
+    // READ GNAMES
+    Classes::FName::GNames = *reinterpret_cast<Classes::TNameEntryArray**>(base_address + 0x36E7710); // 48 8B 3D ? ? ? ? 48 85 FF 75 38
