@@ -1,0 +1,14 @@
+ do
+      {
+        v22 = __ROR1__(
+                65793 * (32800 * *(_BYTE *)v20 & 0x88440 | (unsigned int)dword_22110 & 2050 * *(_BYTE *)v20) >> 16,
+                4);
+        v23 = 65793 * (32800 * v22 & 0x88440 | (unsigned int)dword_22110 & 2050 * v22) >> 16;
+        v24 = (unsigned __int8)(2 * v23) ^ ((unsigned __int8)(2 * v23) ^ ((unsigned __int8)v23 >> 1)) & 0x55;
+        v25 = __ROL1__(
+                byte_14F07E0[(unsigned __int8)(65793 * (32800 * v24 & 0x88440 | (unsigned int)dword_22110 & 2050 * v24) >> 16)],
+                1);
+        *(_BYTE *)v20 = byte_14F07E0[v25];
+        v20 = (int *)((char *)v20 + 1);
+      }
+      while ( v20 != &v47 );
