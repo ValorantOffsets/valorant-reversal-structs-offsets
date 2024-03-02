@@ -1,0 +1,57 @@
+mov     qword ptr [rsp+28h], 0
+sub     esi, 70B92E13h
+mov     rsi, [rsp+30h]
+xor     esi, 6CB149CDh
+jmp     short loc_10B1
+mov     eax, [rsp+20h]
+cmp     bp, bp
+sub     esi, 70B92E13h
+mov     r10b, 81h
+rol     r8w, cl
+xor     esi, 2BEE1668h
+inc     eax
+mov     [rsp+20h], eax
+cmp     dword ptr [rsp+20h], 0Ah
+jge     short loc_10E4
+call    sub_1000
+mov     [rsp+30h], rax
+push    rdx
+not     dil
+xchg    r8w, di
+mov     rax, [rsp+30h]
+mov     rcx, [rsp+28h]
+add     rcx, rax
+mov     rax, rcx
+mov     [rsp+28h], rax
+movsx   di, r11b
+cmovz   rdi, rsp
+mov     ecx, 1F4h
+call    cs:Sleep
+jmp     short loc_10A7
+xor     edx, edx
+mov     rax, [rsp+28h]
+mov     ecx, 0Ah
+div     rcx
+mov     [rsp+28h], rax
+stc
+xor     r9d, r10d
+cmc
+stc
+cmp     qword ptr [rsp+28h], 3E8h
+jnb     short loc_1115
+ror     r9d, 1
+not     r9d
+rol     r9d, 1
+cmp     qword ptr [rsp+28h], 0
+jbe     short loc_1115
+xor     r9d, 529C0010h
+push    r10
+add     r10, rbx
+bswap   r10w
+mov     dword ptr [rsp+24h], 0
+jmp     short loc_111D
+mov     dword ptr [rsp+24h], 1
+movsxd  r9, r9d
+cmp     r11b, 36h
+add     rdi, r9
+jmp     loc_4AAE
