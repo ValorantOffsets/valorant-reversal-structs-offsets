@@ -1,0 +1,25 @@
+int __cdecl sub_40EFF2()
+{
+  *(_QWORD *)&v10 = 0x553660BEC7E5474Ai64;
+  *((_QWORD *)&v10 + 1) = 0x42D61B4CC786E705i64;
+  v13 = v10;
+  *(_QWORD *)&v11 = 0x8CCF9FDD03B8D5B1ui64;
+  *((_QWORD *)&v11 + 1) = 0x54644CE6F6DF6054i64;
+  v15 = v11;
+  *(_QWORD *)&v17 = 0x17C89D4619374C4Bi64;
+  *((_QWORD *)&v17 + 1) = 0xB853C5CB573EE50Cui64;
+  __asm
+  {
+    vmovdqu ymm0, [esp+140h+var_80]
+    vpxor   ymm0, ymm0, [esp+140h+var_E0]
+    vmovdqa [esp+140h+var_E0], ymm0
+    vmovdqu ymm0, [esp+140h+var_C0]
+    vpxor   ymm0, ymm0, [esp+140h+var_60]
+    vmovdqa [esp+140h+var_C0], ymm0
+    vmovdqu ymm0, [esp+140h+var_A0]
+    vpxor   ymm0, ymm0, [esp+140h+var_40]
+    vmovdqa [esp+140h+var_A0], ymm0
+    vzeroupper
+  }
+  return 0;
+}
